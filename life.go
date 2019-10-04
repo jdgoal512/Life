@@ -103,7 +103,7 @@ func (l *Life) addFigure(x int, y int, points [][2]int) {
 	}
 }
 
-var RPENTAMINO = [][2]int{{1, 0}, {2, 0}, {0, 1}, {1, 1}, {1, 2}}
+var RPENTOMINO = [][2]int{{1, 0}, {2, 0}, {0, 1}, {1, 1}, {1, 2}}
 var BLOCK = [][2]int{{0, 0}, {1, 0}, {0, 1}, {1, 1}}
 var BLINKER = [][2]int{{1, 0}, {1, 1}, {1, 2}}
 var BEACON = [][2]int{{0, 0}, {0, 1}, {1, 0}, {2, 3}, {3, 2}, {3, 3}}
@@ -112,7 +112,7 @@ func main() {
 	rules := [9]int{D, D, S, G, D, D, D, D, D}
 	game := NewLife(10, 10, rules)
 	// game.addFigure(0, 0, BEACON)
-	game.addFigure(4, 4, RPENTAMINO)
+	game.addFigure(4, 4, RPENTOMINO)
 
 	for {
 		game.printGrid()

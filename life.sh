@@ -85,7 +85,7 @@ next() {
     done
 }
 
-# R-pentamino
+# R-pentomino
 set 5 5 1
 set 6 5 1
 set 4 6 1

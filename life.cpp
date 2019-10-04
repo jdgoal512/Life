@@ -1,6 +1,7 @@
 #include <array>
 #include <iostream>
 #include <time.h>
+
 using namespace std;
 
 // D: Die, S: Stay the same, G: Grow a new cell
@@ -48,7 +49,7 @@ class Life {
             cout << "+" << bar << "+" << endl;
             for (int y = 0; y < height; y++) {
                 cout << "|";
-                for (int x = 0; x < height; x++) {
+                for (int x = 0; x < width; x++) {
                     if (grid[x][y]) {
                         cout << "0";
                     } else {
@@ -84,16 +85,18 @@ class Life {
     }
 };
 
-int RPENTAMINO[][2] = {{1, 0}, {2, 0}, {0, 1}, {1, 1}, {1, 2}};
+int RPENTOMINO[][2] = {{1, 0}, {2, 0}, {0, 1}, {1, 1}, {1, 2}};
 int BLOCK[][2] = {{0, 0}, {1, 0}, {0, 1}, {1, 1}};
 int BLINKER[][2] = {{1, 0}, {1, 1}, {1, 2}};
 int BEACON[][2] = {{0, 0}, {0, 1}, {1, 0}, {2, 3}, {3, 2}, {3, 3}};
 
 int main() {
     array<int, 9> rules = {D, D, S, G, D, D, D, D, D};
-    Life<10, 10> game = Life<10, 10>(rules);
-    game.addFigure(4, 4, BEACON, sizeof(BEACON)/sizeof(int));
-    game.addFigure(4, 4, RPENTAMINO, sizeof(RPENTAMINO)/sizeof(int));
+    const int WIDTH = 20; 
+    const int HEIGHT = 10;
+    Life<WIDTH, HEIGHT> game = Life<WIDTH, HEIGHT>(rules);
+    game.addFigure(0, 0, BEACON, 6);
+    game.addFigure(4, 4, RPENTOMINO, 5);
 
     while (true) {
         game.printGrid();

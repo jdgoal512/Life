@@ -57,7 +57,7 @@ class Life:
             self.grid[x+a][y+b] = True
 
 
-RPENTAMINO = [[1, 0], [2, 0], [0, 1], [1, 1], [1, 2]]
+RPENTOMINO = [[1, 0], [2, 0], [0, 1], [1, 1], [1, 2]]
 BLOCK = [[0, 0], [1, 0], [0, 1], [1, 1]]
 BLINKER = [[1, 0], [1, 1], [1, 2]]
 BEACON = [[0, 0], [0, 1], [1, 0], [2, 3], [3, 2], [3, 3]]
@@ -65,7 +65,7 @@ BEACON = [[0, 0], [0, 1], [1, 0], [2, 3], [3, 2], [3, 3]]
 if __name__ == '__main__':
     game = Life()
     # game.add_figure(BEACON, x=2, y=1)
-    game.add_figure(RPENTAMINO, x=4, y=4)
+    game.add_figure(RPENTOMINO, x=4, y=4)
 
     while True:
         game.print_grid()

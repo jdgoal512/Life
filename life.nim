@@ -59,14 +59,14 @@ proc addFigure(self: var Life, points: openarray[array[2, int]], x: int = 5,
   for point in points:
     self.grid[x+point[0]][y+point[1]] = true
 
-let Rpentamino = [[1, 0], [2, 0], [0, 1], [1, 1], [1, 2]]
+let RPentomino = [[1, 0], [2, 0], [0, 1], [1, 1], [1, 2]]
 let Block = [[0, 0], [1, 0], [0, 1], [1, 1]]
 let Blinker = [[1, 0], [1, 1], [1, 2]]
 let Beacon = [[0, 0], [0, 1], [1, 0], [2, 3], [3, 2], [3, 3]]
 
 var game = Life[20, 10](rules: DefaultRules)
 game.add_figure(Beacon, x=1, y=1)
-game.add_figure(Rpentamino, 4, 4)
+game.add_figure(RPentomino, 4, 4)
 
 while true:
   game.printGrid()

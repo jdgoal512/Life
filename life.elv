@@ -76,12 +76,12 @@ fn add-figure [&x=5 &y=5 points]{
     }
 }
 
-RPENTAMINO = [[1 0] [2 0] [0 1] [1 1] [1 2]]
+RPENTOMINO = [[1 0] [2 0] [0 1] [1 1] [1 2]]
 BLOCK = [[0 0] [1 0] [0 1] [1 1]]
 BLINKER = [[1 0] [1 1] [1 2]]
 BEACON = [[0 0] [0 1] [1 0] [2 3] [3 2] [3 3]]
 
-# add-figure &x=8 &y=4 $RPENTAMINO
+# add-figure &x=8 &y=4 $RPENTOMINO
 # add-figure &x=2 &y=7 $BLOCK
 # add-figure &x=15 &y=1 $BLINKER
 add-figure &x=2 &y=1 $BEACON

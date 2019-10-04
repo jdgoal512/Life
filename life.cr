@@ -94,14 +94,14 @@ class Life
   end
 end
 
-RPENTAMINO = [[1, 0], [2, 0], [0, 1], [1, 1], [1, 2]]
+RPENTOMINO = [[1, 0], [2, 0], [0, 1], [1, 1], [1, 2]]
 BLOCK = [[0, 0], [1, 0], [0, 1], [1, 1]]
 BLINKER = [[1, 0], [1, 1], [1, 2]]
 BEACON = [[0, 0], [0, 1], [1, 0], [2, 3], [3, 2], [3, 3]]
 game = Life.new(20, 10)
 # game.add_figure(BEACON, x=0, y=0)
 # game.add_figure(BLINKER, x=0, y=7)
-game.add_figure(RPENTAMINO, x=4, y=4)
+game.add_figure(RPENTOMINO, x=4, y=4)
 while true
     game.print_grid()
     game.next_generation()
