@@ -1,2 +1,4 @@
 life
 *.class
+*.o
+*.ali
